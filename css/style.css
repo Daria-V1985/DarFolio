@@ -390,7 +390,7 @@ textarea.input {
   display: grid;
   grid-template-columns: repeat(2,auto);
   justify-content: space-between;
-  gap: .9375rem
+  gap: 1.25rem
 }
 .hard-skills__item-value {
   color: #1c1f25;
@@ -399,12 +399,15 @@ textarea.input {
 .hard-skills__item-line {
   grid-column: span 2;
   background: rgba(28,31,37,.1);
-  height: .625rem
+  height: .625rem;
+  border-radius: .1875rem
 }
 .hard-skills__item-line span {
   display: block;
-  height: .625rem;
-  background: linear-gradient(to left bottom,#f3a071,#010053)
+  height: 1.25rem;
+  margin-top: -.3125rem;
+  border-radius: .1875rem;
+  background: linear-gradient(to left bottom,rgba(243,160,113,.85),rgba(1,0,83,.85))
 }
 .design-skills__content {
   min-height: 100%;
@@ -483,6 +486,10 @@ textarea.input {
   justify-content: center;
   align-items: center
 }
+.design-skills .section-header__title {
+  font-size: 2.1875rem;
+  font-weight: 400
+}
 .frontend-skills__content {
   min-height: 100%;
   display: flex;
@@ -555,14 +562,18 @@ textarea.input {
   justify-content: center;
   align-items: center
 }
+.frontend-skills .section-header__title {
+  font-size: 2.1875rem;
+  font-weight: 400
+}
 .project1__container {
   min-height: 100%;
   display: flex;
   flex-direction: row-reverse;
   justify-content: center;
   align-items: center;
-  padding-top: 3.125rem;
-  padding-bottom: 3.125rem;
+  padding-top: 4.375rem;
+  padding-bottom: 4.375rem;
   position: relative
 }
 .project1__container::before {
@@ -605,22 +616,21 @@ textarea.input {
   font-size: 2.5rem
 }
 .project__text1 {
-  font-size: 1.3125rem;
   line-height: 1.4
 }
 .project__text1-skills {
   display: flex;
   flex-wrap: wrap;
-  margin-top: .9375rem
+  margin-top: .9375rem;
+  margin-bottom: .625rem
 }
 .project__text1-skill {
   border-radius: .3125rem;
   border: 1px solid #f3a071;
   padding: .5rem;
-  margin: 1.25rem .625rem 0 0;
-  font-size: 1rem;
+  margin: 0 .625rem 0 0;
   color: #6a6e77;
-  box-shadow: 3px 5px 5px rgba(243,160,113,.6)
+  box-shadow: 3px 2px 2px rgba(243,160,113,.6)
 }
 .project2__container {
   min-height: 100%;
@@ -628,8 +638,8 @@ textarea.input {
   flex-direction: row-reverse;
   justify-content: center;
   align-items: center;
-  padding-top: 3.125rem;
-  padding-bottom: 3.125rem;
+  padding-top: 4.375rem;
+  padding-bottom: 4.375rem;
   position: relative
 }
 .project2__container::before {
@@ -672,22 +682,21 @@ textarea.input {
   font-size: 2.5rem
 }
 .project__text2 {
-  font-size: 1.3125rem;
   line-height: 1.4
 }
 .project__text2-skills {
   display: flex;
   flex-wrap: wrap;
-  margin-top: .9375rem
+  margin-top: .9375rem;
+  margin-bottom: .625rem
 }
 .project__text2-skill {
   border-radius: .3125rem;
   border: 1px solid #010053;
   padding: .5rem;
-  margin: 1.25rem .625rem 0 0;
-  font-size: 1rem;
+  margin: 0 .625rem 0 0;
   color: #6a6e77;
-  box-shadow: 3px 5px 5px rgba(1,0,83,.6)
+  box-shadow: 3px 2px 2px rgba(1,0,83,.6)
 }
 .project3__container {
   min-height: 100%;
@@ -739,22 +748,21 @@ textarea.input {
   font-size: 2.5rem
 }
 .project__text3 {
-  font-size: 1.3125rem;
   line-height: 1.4
 }
 .project__text3-skills {
   display: flex;
   flex-wrap: wrap;
-  margin-top: .9375rem
+  margin-top: .9375rem;
+  margin-bottom: .625rem
 }
 .project__text3-skill {
   border-radius: .3125rem;
   border: 1px solid #f3a071;
   padding: .5rem;
-  margin: 1.25rem .625rem 0 0;
-  font-size: 1rem;
+  margin: 0 .625rem 0 0;
   color: #6a6e77;
-  box-shadow: 3px 5px 5px rgba(243,160,113,.6)
+  box-shadow: 3px 2px 2px rgba(243,160,113,.6)
 }
 .project4__container {
   min-height: 100%;
@@ -806,22 +814,21 @@ textarea.input {
   font-size: 2.5rem
 }
 .project__text4 {
-  font-size: 1.3125rem;
   line-height: 1.4
 }
 .project__text4-skills {
   display: flex;
   flex-wrap: wrap;
-  margin-top: .9375rem
+  margin-top: .9375rem;
+  margin-bottom: .625rem
 }
 .project__text4-skill {
   border-radius: .3125rem;
   border: 1px solid #010053;
   padding: .5rem;
-  margin: 1.25rem .625rem 0 0;
-  font-size: 1rem;
+  margin: 0 .625rem 0 0;
   color: #6a6e77;
-  box-shadow: 3px 5px 5px rgba(1,0,83,.6)
+  box-shadow: 3px 2px 2px rgba(1,0,83,.6)
 }
 .contacts__container {
   min-height: 100%;
@@ -1058,6 +1065,15 @@ textarea.input {
   .project__title:not(:last-child) {
     margin-bottom: 1.5625rem
   }
+  .project__text1 {
+    font-size: 1.3125rem
+  }
+  .project__text1-skill {
+    margin-top: 1.25rem
+  }
+  .project__text1-skill {
+    font-size: .8125rem
+  }
   .project2__image {
     min-width: 31.25rem
   }
@@ -1066,6 +1082,15 @@ textarea.input {
   }
   .project__title:not(:last-child) {
     margin-bottom: 1.5625rem
+  }
+  .project__text2 {
+    font-size: 1.3125rem
+  }
+  .project__text2-skill {
+    margin-top: 1.25rem
+  }
+  .project__text2-skill {
+    font-size: .8125rem
   }
   .project3__image {
     min-width: 31.25rem
@@ -1076,6 +1101,15 @@ textarea.input {
   .project__title:not(:last-child) {
     margin-bottom: 1.5625rem
   }
+  .project__text3 {
+    font-size: 1.3125rem
+  }
+  .project__text3-skill {
+    margin-top: 1.25rem
+  }
+  .project__text3-skill {
+    font-size: .8125rem
+  }
   .project4__image {
     min-width: 31.25rem
   }
@@ -1084,6 +1118,15 @@ textarea.input {
   }
   .project__title:not(:last-child) {
     margin-bottom: 1.5625rem
+  }
+  .project__text4 {
+    font-size: 1.3125rem
+  }
+  .project__text4-skill {
+    margin-top: 1.25rem
+  }
+  .project__text4-skill {
+    font-size: .8125rem
   }
 }
 @media (max-width:1300px) {
@@ -1272,6 +1315,15 @@ textarea.input {
   .project__title:not(:last-child) {
     margin-bottom: .75rem
   }
+  .project__text1 {
+    font-size: 1.125rem
+  }
+  .project__text1-skill {
+    margin-top: .3125rem
+  }
+  .project__text1-skill {
+    font-size: .625rem
+  }
   .project2__image {
     min-width: 21.875rem
   }
@@ -1280,6 +1332,15 @@ textarea.input {
   }
   .project__title:not(:last-child) {
     margin-bottom: .75rem
+  }
+  .project__text2 {
+    font-size: 1.125rem
+  }
+  .project__text2-skill {
+    margin-top: .3125rem
+  }
+  .project__text2-skill {
+    font-size: .625rem
   }
   .project3__image {
     min-width: 21.875rem
@@ -1290,6 +1351,15 @@ textarea.input {
   .project__title:not(:last-child) {
     margin-bottom: .75rem
   }
+  .project__text3 {
+    font-size: 1.125rem
+  }
+  .project__text3-skill {
+    margin-top: .3125rem
+  }
+  .project__text3-skill {
+    font-size: .625rem
+  }
   .project4__image {
     min-width: 21.875rem
   }
@@ -1298,6 +1368,15 @@ textarea.input {
   }
   .project__title:not(:last-child) {
     margin-bottom: .75rem
+  }
+  .project__text4 {
+    font-size: 1.125rem
+  }
+  .project__text4-skill {
+    margin-top: .3125rem
+  }
+  .project__text4-skill {
+    font-size: .625rem
   }
 }
 @media (min-width:23.4375em) and (max-width:120em) {
@@ -1551,6 +1630,36 @@ textarea.input {
       margin-bottom: calc(.75rem + .8125 * (100vw - 23.4375rem)/ 96.5625)
     }
   }
+  @supports (font-size:clamp(1.125rem ,1.0794902913rem + 0.1941747573vw ,1.3125rem)) {
+    .project__text1 {
+      font-size: clamp(1.125rem ,1.0794902913rem + .1941747573vw ,1.3125rem)
+    }
+  }
+  @supports not (font-size:clamp(1.125rem ,1.0794902913rem + 0.1941747573vw ,1.3125rem)) {
+    .project__text1 {
+      font-size: calc(1.125rem + .1875 * (100vw - 23.4375rem)/ 96.5625)
+    }
+  }
+  @supports (margin-top:clamp(0.3125rem ,0.0849514563rem + 0.9708737864vw ,1.25rem)) {
+    .project__text1-skill {
+      margin-top: clamp(.3125rem ,.0849514563rem + .9708737864vw ,1.25rem)
+    }
+  }
+  @supports not (margin-top:clamp(0.3125rem ,0.0849514563rem + 0.9708737864vw ,1.25rem)) {
+    .project__text1-skill {
+      margin-top: calc(.3125rem + .9375 * (100vw - 23.4375rem)/ 96.5625)
+    }
+  }
+  @supports (font-size:clamp(0.625rem ,0.5794902913rem + 0.1941747573vw ,0.8125rem)) {
+    .project__text1-skill {
+      font-size: clamp(.625rem ,.5794902913rem + .1941747573vw ,.8125rem)
+    }
+  }
+  @supports not (font-size:clamp(0.625rem ,0.5794902913rem + 0.1941747573vw ,0.8125rem)) {
+    .project__text1-skill {
+      font-size: calc(.625rem + .1875 * (100vw - 23.4375rem)/ 96.5625)
+    }
+  }
   @supports (min-width:clamp(21.875rem ,19.5995145631rem + 9.7087378641vw ,31.25rem)) {
     .project2__image {
       min-width: clamp(21.875rem ,19.5995145631rem + 9.7087378641vw ,31.25rem)
@@ -1579,6 +1688,36 @@ textarea.input {
   @supports not (margin-bottom:clamp(0.75rem ,0.5527912621rem + 0.8414239482vw ,1.5625rem)) {
     .project__title:not(:last-child) {
       margin-bottom: calc(.75rem + .8125 * (100vw - 23.4375rem)/ 96.5625)
+    }
+  }
+  @supports (font-size:clamp(1.125rem ,1.0794902913rem + 0.1941747573vw ,1.3125rem)) {
+    .project__text2 {
+      font-size: clamp(1.125rem ,1.0794902913rem + .1941747573vw ,1.3125rem)
+    }
+  }
+  @supports not (font-size:clamp(1.125rem ,1.0794902913rem + 0.1941747573vw ,1.3125rem)) {
+    .project__text2 {
+      font-size: calc(1.125rem + .1875 * (100vw - 23.4375rem)/ 96.5625)
+    }
+  }
+  @supports (margin-top:clamp(0.3125rem ,0.0849514563rem + 0.9708737864vw ,1.25rem)) {
+    .project__text2-skill {
+      margin-top: clamp(.3125rem ,.0849514563rem + .9708737864vw ,1.25rem)
+    }
+  }
+  @supports not (margin-top:clamp(0.3125rem ,0.0849514563rem + 0.9708737864vw ,1.25rem)) {
+    .project__text2-skill {
+      margin-top: calc(.3125rem + .9375 * (100vw - 23.4375rem)/ 96.5625)
+    }
+  }
+  @supports (font-size:clamp(0.625rem ,0.5794902913rem + 0.1941747573vw ,0.8125rem)) {
+    .project__text2-skill {
+      font-size: clamp(.625rem ,.5794902913rem + .1941747573vw ,.8125rem)
+    }
+  }
+  @supports not (font-size:clamp(0.625rem ,0.5794902913rem + 0.1941747573vw ,0.8125rem)) {
+    .project__text2-skill {
+      font-size: calc(.625rem + .1875 * (100vw - 23.4375rem)/ 96.5625)
     }
   }
   @supports (min-width:clamp(21.875rem ,19.5995145631rem + 9.7087378641vw ,31.25rem)) {
@@ -1611,6 +1750,36 @@ textarea.input {
       margin-bottom: calc(.75rem + .8125 * (100vw - 23.4375rem)/ 96.5625)
     }
   }
+  @supports (font-size:clamp(1.125rem ,1.0794902913rem + 0.1941747573vw ,1.3125rem)) {
+    .project__text3 {
+      font-size: clamp(1.125rem ,1.0794902913rem + .1941747573vw ,1.3125rem)
+    }
+  }
+  @supports not (font-size:clamp(1.125rem ,1.0794902913rem + 0.1941747573vw ,1.3125rem)) {
+    .project__text3 {
+      font-size: calc(1.125rem + .1875 * (100vw - 23.4375rem)/ 96.5625)
+    }
+  }
+  @supports (margin-top:clamp(0.3125rem ,0.0849514563rem + 0.9708737864vw ,1.25rem)) {
+    .project__text3-skill {
+      margin-top: clamp(.3125rem ,.0849514563rem + .9708737864vw ,1.25rem)
+    }
+  }
+  @supports not (margin-top:clamp(0.3125rem ,0.0849514563rem + 0.9708737864vw ,1.25rem)) {
+    .project__text3-skill {
+      margin-top: calc(.3125rem + .9375 * (100vw - 23.4375rem)/ 96.5625)
+    }
+  }
+  @supports (font-size:clamp(0.625rem ,0.5794902913rem + 0.1941747573vw ,0.8125rem)) {
+    .project__text3-skill {
+      font-size: clamp(.625rem ,.5794902913rem + .1941747573vw ,.8125rem)
+    }
+  }
+  @supports not (font-size:clamp(0.625rem ,0.5794902913rem + 0.1941747573vw ,0.8125rem)) {
+    .project__text3-skill {
+      font-size: calc(.625rem + .1875 * (100vw - 23.4375rem)/ 96.5625)
+    }
+  }
   @supports (min-width:clamp(21.875rem ,19.5995145631rem + 9.7087378641vw ,31.25rem)) {
     .project4__image {
       min-width: clamp(21.875rem ,19.5995145631rem + 9.7087378641vw ,31.25rem)
@@ -1639,6 +1808,36 @@ textarea.input {
   @supports not (margin-bottom:clamp(0.75rem ,0.5527912621rem + 0.8414239482vw ,1.5625rem)) {
     .project__title:not(:last-child) {
       margin-bottom: calc(.75rem + .8125 * (100vw - 23.4375rem)/ 96.5625)
+    }
+  }
+  @supports (font-size:clamp(1.125rem ,1.0794902913rem + 0.1941747573vw ,1.3125rem)) {
+    .project__text4 {
+      font-size: clamp(1.125rem ,1.0794902913rem + .1941747573vw ,1.3125rem)
+    }
+  }
+  @supports not (font-size:clamp(1.125rem ,1.0794902913rem + 0.1941747573vw ,1.3125rem)) {
+    .project__text4 {
+      font-size: calc(1.125rem + .1875 * (100vw - 23.4375rem)/ 96.5625)
+    }
+  }
+  @supports (margin-top:clamp(0.3125rem ,0.0849514563rem + 0.9708737864vw ,1.25rem)) {
+    .project__text4-skill {
+      margin-top: clamp(.3125rem ,.0849514563rem + .9708737864vw ,1.25rem)
+    }
+  }
+  @supports not (margin-top:clamp(0.3125rem ,0.0849514563rem + 0.9708737864vw ,1.25rem)) {
+    .project__text4-skill {
+      margin-top: calc(.3125rem + .9375 * (100vw - 23.4375rem)/ 96.5625)
+    }
+  }
+  @supports (font-size:clamp(0.625rem ,0.5794902913rem + 0.1941747573vw ,0.8125rem)) {
+    .project__text4-skill {
+      font-size: clamp(.625rem ,.5794902913rem + .1941747573vw ,.8125rem)
+    }
+  }
+  @supports not (font-size:clamp(0.625rem ,0.5794902913rem + 0.1941747573vw ,0.8125rem)) {
+    .project__text4-skill {
+      font-size: calc(.625rem + .1875 * (100vw - 23.4375rem)/ 96.5625)
     }
   }
 }
