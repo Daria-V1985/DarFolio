@@ -332,7 +332,7 @@ textarea.input {
   display: flex
 }
 .main__body {
-  display: flex;
+  display: block;
   flex-grow: 1;
   position: relative
 }
@@ -954,17 +954,18 @@ textarea.input {
 .contacts__textarea.input {
   padding: .9375rem 0 0 1.25rem
 }
-.contacts__btn-send .btn {
+.contacts__btn-send {
   border: 2px solid rgba(1,0,83,.7);
   background-color: rgba(1,0,83,.7);
   color: #e3e6ec;
   transition: all .5s ease;
   margin-right: .9375rem
 }
-.contacts__btn-calc .btn {
+.contacts__btn-calc {
   border: 2px solid rgba(1,0,83,.7);
   color: #010053;
-  transition: all .5s ease
+  transition: all .5s ease;
+  background-color: transparent
 }
 .contacts__social {
   display: flex;
@@ -1157,6 +1158,15 @@ textarea.input {
   }
 }
 @media (max-width:61.99875em) {
+  .main__body {
+    display: none
+  }
+  .main__mobile-body {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    min-height: 100%
+  }
   .skills__container {
     flex-direction: column
   }
@@ -1281,6 +1291,20 @@ textarea.input {
     width: 12.5rem;
     height: 12.5rem
   }
+  .contacts__btn-send {
+    border: 2px solid rgba(1,0,83,.7);
+    background-color: rgba(1,0,83,.7);
+    color: #e3e6ec;
+    transition: all .5s ease;
+    margin-right: .9375rem
+  }
+  .contacts__btn-calc {
+    border: 2px solid rgba(1,0,83,.7);
+    background-color: transparent;
+    color: rgba(1,0,83,.7);
+    transition: all .5s ease;
+    margin-right: .9375rem
+  }
 }
 @media (max-width:47.99875em) and (any-hover:hover) {
   .btn:hover {
@@ -1288,19 +1312,22 @@ textarea.input {
     background-color: transparent;
     color: #1c1f25
   }
+  .contacts__btn-send:hover {
+    background-color: transparent;
+    border: 2px solid rgba(1,0,83,.7);
+    color: #010053;
+    transition: all .5s ease
+  }
+  .contacts__btn-calc:hover {
+    background-color: rgba(1,0,83,.7);
+    border: 2px solid rgba(1,0,83,.7);
+    color: #e3e6ec;
+    transition: all .5s ease
+  }
 }
 @media (max-width:29.99875em) {
   .main__container {
     padding: 0 0
-  }
-  .main__body {
-    display: none
-  }
-  .main__mobile-body {
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    min-height: 100%
   }
   .contacts__title {
     font-size: 2.1875rem
@@ -1993,13 +2020,13 @@ textarea.input {
     color: #e3e6ec;
     transition: all .5s ease
   }
-  .contacts__btn-send .btn:hover {
+  .contacts__btn-send:hover {
     background-color: transparent;
     border: 2px solid rgba(1,0,83,.7);
     color: #010053;
     transition: all .5s ease
   }
-  .contacts__btn-calc .btn:hover {
+  .contacts__btn-calc:hover {
     border: 2px solid rgba(1,0,83,.7);
     background-color: rgba(1,0,83,.7);
     color: #e3e6ec;
