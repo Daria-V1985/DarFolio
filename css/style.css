@@ -1505,11 +1505,11 @@ textarea.input {
       font-size: calc(1.5625rem + 2.1875 * (100vw - 23.4375rem)/ 96.5625)
     }
   }
-  @supports (right:clamp(0.46875rem ,-1.2378640777rem + 7.2815533981vw ,7.5rem)) {
+  /* @supports (right:clamp(0.46875rem ,-1.2378640777rem + 7.2815533981vw ,7.5rem)) {
     .fullpage__section::after {
       right: clamp(.46875rem ,-1.2378640777rem + 7.2815533981vw ,7.5rem)
     }
-  }
+  } */
   @supports not (right:clamp(0.46875rem ,-1.2378640777rem + 7.2815533981vw ,7.5rem)) {
     .fullpage__section::after {
       right: calc(.46875rem + 7.03125 * (100vw - 23.4375rem)/ 96.5625)
