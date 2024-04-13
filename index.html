@@ -6,7 +6,7 @@
 	<meta charset="UTF-8">
 	<meta name="format-detection" content="telephone=no">
 	<!-- <style>body{opacity: 0;}</style> -->
-	<link rel="stylesheet" href="css/style.min.css?_v=20240413181455">
+	<link rel="stylesheet" href="css/style.min.css?_v=20240414013408">
 	<link rel="shortcut icon" href="favicon.ico">
 	<!-- <meta name="robots" content="noindex, nofollow"> -->
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -18,6 +18,7 @@
 		<main data-fp data-fp-bullets class="fullpage">
 			<section data-fp-section class="fullpage__section main">
 				<div class="main__container">
+					<div class="main__section-header section-header"></div>
 					<div class="main__body">
 						<picture><source srcset="img/main1.webp" type="image/webp"><img class="main__image" src="img/main1.png" alt="Картинка"></picture>
 					</div>
@@ -270,13 +271,13 @@
 							<h2 class="section-header__title contacts__title section-header__title_big">&lsaquo;/ Свяжитесь со мной &rsaquo;</h2>
 						</div>
 						<h3 class="contacts__subtitle">Любым удобным для вас способом</h3>
-						<form action="#" class="contacts__form">
-							<input id="name" data-error="" autocomplete="off" type="text" data-required="name" class="contacts__input input" placeholder="Ваше имя">
-							<input id="email" data-error="" autocomplete="off" type="email" data-required="email" class="contacts__input input" placeholder="E-mail">
-							<input id="phone" data-error="" autocomplete="off" type="tel" data-required="tel" class="contacts__input tel" placeholder="+7 ___-___-__-__">
-							<textarea id="text" data-error="" autocomplete="off" type="textarea" data-required="textarea" class="contacts__textarea input" placeholder="Ваше сообщение" cols="45" rows="10"></textarea>
+						<form data-ajax class="contacts__form" method="POST" action="sendmail.php">
+							<input id="name" data-validate="" autocomplete="off" type="text" data-required="name" class="contacts__input input" placeholder="Ваше имя">
+							<input id="email" data-validate="" autocomplete="off" type="email" data-required="email" class="contacts__input input" placeholder="E-mail">
+							<input id="phone" autocomplete="off" type="tel" data-required="tel" class="contacts__input tel" placeholder="+7 ___-___-__-__">
+							<textarea id="text" data-validate="" autocomplete="off" type="textarea" data-required="textarea" class="contacts__textarea input" placeholder="Ваше сообщение" cols="45" rows="10"></textarea>
 							<div class="contacts__btn">
-								<button class="contacts__btn-send btn">Отправить</button>
+								<button type="submit" class="contacts__btn-send btn">Отправить</button>
 								<button class="contacts__btn-calc btn">
 									<a href="#">Рассчитать стоимость услуг</a>
 								</button>
@@ -309,10 +310,10 @@
 		</main>
 
 	</div>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js?_v=20240413181455"></script>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js?_v=20240413181455"></script>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/Draggable.min.js?_v=20240413181455"></script>
-	<script src="js/app.min.js?_v=20240413181455"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js?_v=20240414013408"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js?_v=20240414013408"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/Draggable.min.js?_v=20240414013408"></script>
+	<script src="js/app.min.js?_v=20240414013408"></script>
 </body>
 
 </html>
