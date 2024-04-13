@@ -318,6 +318,7 @@ textarea.input {
   font-weight: 700;
   position: absolute;
   top: 50%;
+  right: 50%;
   color: #e3e6ec;
   -webkit-transform: translate(50%,-50%);
   transform: translate(50%,-50%);
@@ -329,7 +330,7 @@ textarea.input {
   display: flex
 }
 .main__body {
-  display: block;
+  display: flex;
   flex-grow: 1;
   position: relative
 }
@@ -1288,7 +1289,6 @@ textarea.input {
     display: none
   }
   .main__mobile-body {
-    display: block;
     display: flex;
     justify-content: center;
     flex-direction: column;
