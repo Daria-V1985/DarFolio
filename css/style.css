@@ -1187,8 +1187,7 @@ textarea.input {
     text-align: right
   }
   .fullpage__section::after {
-    top: 1.25rem;
-    right: 50%
+    top: 1.25rem
   }
   .skills__container {
     flex-direction: column
