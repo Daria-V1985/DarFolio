@@ -329,8 +329,12 @@ textarea.input {
   display: flex
 }
 .main__body {
+  display: block;
   flex-grow: 1;
   position: relative
+}
+.main__mobile-body {
+  display: none
 }
 .main__section-header {
   max-width: 34.625rem;
@@ -338,6 +342,15 @@ textarea.input {
   z-index: 1
 }
 .main__image {
+  position: absolute;
+  width: 100%;
+  height: 150%;
+  top: -28%;
+  left: 0;
+  -o-object-fit: cover;
+  object-fit: cover
+}
+.main__mobile-image {
   position: absolute;
   width: 100%;
   height: 100%;
@@ -368,11 +381,13 @@ textarea.input {
   align-items: flex-start;
   position: relative
 }
+.no-webp .skills__container::before {
+  background: url(../img/fon.png)
+}
 .skills__container::before {
   content: "";
   width: 30%;
   height: 100%;
-  background-color: rgba(1,0,83,.8);
   position: absolute;
   top: 0;
   left: 0;
@@ -381,7 +396,7 @@ textarea.input {
 .skills__content {
   flex: 0 1 65%;
   align-self: center;
-  padding: 12.5rem 0
+  padding: 15.625rem 0
 }
 .hard-skills {
   display: grid
@@ -398,7 +413,7 @@ textarea.input {
 }
 .hard-skills__item-line {
   grid-column: span 2;
-  background: rgba(28,31,37,.1);
+  background: rgba(227,230,236,.6274509804);
   height: .625rem;
   border-radius: .1875rem
 }
@@ -407,7 +422,7 @@ textarea.input {
   height: 1.25rem;
   margin-top: -.3125rem;
   border-radius: .1875rem;
-  background: linear-gradient(to left bottom,rgba(243,160,113,.85),rgba(1,0,83,.85))
+  background: linear-gradient(to left bottom,#d14d8a,#010053)
 }
 .design-skills__content {
   min-height: 100%;
@@ -443,31 +458,31 @@ textarea.input {
   display: block;
   width: 17.25rem;
   height: 17.25rem;
-  background: conic-gradient(rgba(1,0,83,.8) 230deg,rgba(243,160,113,.2) 3deg);
-  border-radius: 50%;
-  -webkit-animation: progress1 4s ease-in-out backwards;
-  animation: progress1 4s ease-in-out backwards
+  background: conic-gradient(rgba(1,0,83,.8) 230deg,rgba(28,31,37,.0549019608) 3deg);
+  border-radius: 50%
 }
 .design-skills__canvas .canvas2 {
   display: block;
   width: 17.25rem;
   height: 17.25rem;
-  background: conic-gradient(rgba(1,0,83,.8) 216deg,rgba(243,160,113,.2) 3deg);
+  background: conic-gradient(rgba(1,0,83,.8) 216deg,rgba(28,31,37,.0549019608) 3deg);
   border-radius: 50%
 }
 .design-skills__canvas .canvas3 {
   display: block;
   width: 17.25rem;
   height: 17.25rem;
-  background: conic-gradient(rgba(1,0,83,.8) 320deg,rgba(243,160,113,.2) 3deg);
+  background: conic-gradient(rgba(1,0,83,.8) 320deg,rgba(28,31,37,.0549019608) 3deg);
   border-radius: 50%
 }
 .design-skills__percent {
+  font-family: "Mr. Lonely",serif;
   font-weight: 700;
   color: #1c1f25;
   margin-bottom: 1.125rem
 }
 .design-skills__title {
+  font-family: "Mr. Lonely",serif;
   font-weight: 700;
   color: #1c1f25;
   margin-bottom: 1.5rem
@@ -521,29 +536,31 @@ textarea.input {
   display: block;
   width: 17.25rem;
   height: 17.25rem;
-  background: conic-gradient(rgba(1,0,83,.8) 342deg,rgba(243,160,113,.2) 3deg);
+  background: conic-gradient(rgba(1,0,83,.8) 342deg,rgba(28,31,37,.0549019608) 3deg);
   border-radius: 50%
 }
 .frontend-skills__canvas .canvas5 {
   display: block;
   width: 17.25rem;
   height: 17.25rem;
-  background: conic-gradient(rgba(1,0,83,.8) 284deg,rgba(243,160,113,.2) 3deg);
+  background: conic-gradient(rgba(1,0,83,.8) 284deg,rgba(28,31,37,.0549019608) 3deg);
   border-radius: 50%
 }
 .frontend-skills__canvas .canvas6 {
   display: block;
   width: 17.25rem;
   height: 17.25rem;
-  background: conic-gradient(rgba(1,0,83,.8) 187deg,rgba(243,160,113,.2) 3deg);
+  background: conic-gradient(rgba(1,0,83,.8) 187deg,rgba(28,31,37,.0549019608) 3deg);
   border-radius: 50%
 }
 .frontend-skills__percent {
+  font-family: "Mr. Lonely",serif;
   font-weight: 700;
   color: #1c1f25;
   margin-bottom: 1.125rem
 }
 .frontend-skills__title {
+  font-family: "Mr. Lonely",serif;
   font-weight: 700;
   color: #1c1f25;
   margin-bottom: 1.5rem
@@ -580,7 +597,7 @@ textarea.input {
   content: "";
   width: 37.5%;
   height: 100%;
-  background-color: rgba(243,160,113,.6);
+  background-color: rgba(111,45,122,.3);
   position: absolute;
   top: 0;
   left: 0;
@@ -626,11 +643,11 @@ textarea.input {
 }
 .project__text1-skill {
   border-radius: .3125rem;
-  border: 1px solid #f3a071;
+  border: 1px solid #6f2d7a;
   padding: .5rem;
   margin: 0 .625rem 0 0;
   color: #6a6e77;
-  box-shadow: 3px 2px 2px rgba(243,160,113,.6)
+  box-shadow: 3px 2px 2px rgba(111,45,122,.3)
 }
 .project2__container {
   min-height: 100%;
@@ -646,7 +663,7 @@ textarea.input {
   content: "";
   width: 37.5%;
   height: 100%;
-  background-color: rgba(1,0,83,.6);
+  background-color: rgba(118,166,237,.3);
   position: absolute;
   top: 0;
   left: 0;
@@ -692,11 +709,11 @@ textarea.input {
 }
 .project__text2-skill {
   border-radius: .3125rem;
-  border: 1px solid #010053;
+  border: 1px solid #76a6ed;
   padding: .5rem;
   margin: 0 .625rem 0 0;
   color: #6a6e77;
-  box-shadow: 3px 2px 2px rgba(1,0,83,.6)
+  box-shadow: 3px 2px 2px rgba(118,166,237,.3)
 }
 .project3__container {
   min-height: 100%;
@@ -712,7 +729,7 @@ textarea.input {
   content: "";
   width: 37.5%;
   height: 100%;
-  background-color: rgba(243,160,113,.6);
+  background-color: rgba(209,77,138,.3);
   position: absolute;
   top: 0;
   left: 0;
@@ -758,11 +775,11 @@ textarea.input {
 }
 .project__text3-skill {
   border-radius: .3125rem;
-  border: 1px solid #f3a071;
+  border: 1px solid #d14d8a;
   padding: .5rem;
   margin: 0 .625rem 0 0;
   color: #6a6e77;
-  box-shadow: 3px 2px 2px rgba(243,160,113,.6)
+  box-shadow: 3px 2px 2px rgba(209,77,138,.3)
 }
 .project4__container {
   min-height: 100%;
@@ -778,7 +795,7 @@ textarea.input {
   content: "";
   width: 37.5%;
   height: 100%;
-  background-color: rgba(1,0,83,.6);
+  background-color: rgba(7,5,114,.3);
   position: absolute;
   top: 0;
   left: 0;
@@ -824,11 +841,11 @@ textarea.input {
 }
 .project__text4-skill {
   border-radius: .3125rem;
-  border: 1px solid #010053;
+  border: 1px solid #070572;
   padding: .5rem;
   margin: 0 .625rem 0 0;
   color: #6a6e77;
-  box-shadow: 3px 2px 2px rgba(1,0,83,.6)
+  box-shadow: 3px 2px 2px rgba(7,5,114,.3)
 }
 .contacts__container {
   min-height: 100%;
@@ -973,9 +990,6 @@ textarea.input {
     display: flex;
     align-items: flex-start
   }
-  .about__title:not(:last-child) {
-    margin-bottom: 1.3333333333em
-  }
   .about__content {
     padding-right: 1.25rem
   }
@@ -1042,7 +1056,7 @@ textarea.input {
     font-size: 3.125rem
   }
   .design-skills__title {
-    font-size: 1.875rem
+    font-size: 2.5rem
   }
   .frontend-skills__content {
     padding-top: 9.375rem
@@ -1054,7 +1068,7 @@ textarea.input {
     font-size: 3.125rem
   }
   .frontend-skills__title {
-    font-size: 1.875rem
+    font-size: 2.5rem
   }
   .project1__image {
     min-width: 31.25rem
@@ -1160,46 +1174,84 @@ textarea.input {
     flex-direction: column
   }
   .skills__container::before {
-    width: 37.5%;
-    background-color: rgba(1,0,83,.2)
+    width: 100%
+  }
+  .skills .section-header__title {
+    color: #e3e6ec
+  }
+  .hard-skills__item-title {
+    color: #e3e6ec
+  }
+  .hard-skills__item-value {
+    color: #e3e6ec
   }
   .design-skills__items {
     grid-template-columns: repeat(1,auto);
     justify-content: center
   }
-  .design-skills__item {
-    margin-bottom: 2.8125rem
+  .design-skills__canvas {
+    width: 12.5rem;
+    height: 12.5rem
+  }
+  .design-skills__canvas .canvas1 {
+    width: 12.5rem;
+    height: 12.5rem
+  }
+  .design-skills__canvas .canvas2 {
+    width: 12.5rem;
+    height: 12.5rem
+  }
+  .design-skills__canvas .canvas3 {
+    width: 12.5rem;
+    height: 12.5rem
   }
   .frontend-skills__items {
     grid-template-columns: repeat(1,auto);
     justify-content: center
   }
-  .frontend-skills__item {
-    margin-bottom: 2.8125rem
+  .frontend-skills__canvas {
+    width: 12.5rem;
+    height: 12.5rem
+  }
+  .frontend-skills__canvas .canvas4 {
+    width: 12.5rem;
+    height: 12.5rem
+  }
+  .frontend-skills__canvas .canvas5 {
+    width: 12.5rem;
+    height: 12.5rem
+  }
+  .frontend-skills__canvas .canvas6 {
+    width: 12.5rem;
+    height: 12.5rem
   }
   .project1__container {
     flex-direction: column
   }
   .project1__container::before {
-    background-color: rgba(243,160,113,.3)
+    background-color: rgba(111,45,122,.1);
+    width: 100%
   }
   .project2__container {
     flex-direction: column
   }
   .project2__container::before {
-    background-color: rgba(1,0,83,.2)
+    width: 100%;
+    background-color: rgba(118,166,237,.1)
   }
   .project3__container {
     flex-direction: column
   }
   .project3__container::before {
-    background-color: rgba(243,160,113,.2)
+    width: 100%;
+    background-color: rgba(209,77,138,.1)
   }
   .project4__container {
     flex-direction: column
   }
   .project4__container::before {
-    background-color: rgba(1,0,83,.2)
+    width: 100%;
+    background-color: rgba(7,5,114,.1)
   }
 }
 @media (max-width:47.99875em) and (any-hover:hover) {
@@ -1233,6 +1285,10 @@ textarea.input {
     padding: 0 0
   }
   .main__body {
+    display: none
+  }
+  .main__mobile-body {
+    display: block;
     display: flex;
     justify-content: center;
     flex-direction: column;
@@ -1286,25 +1342,25 @@ textarea.input {
     padding-top: 3.125rem
   }
   .design-skills__percent {
-    margin-top: 2.1875rem
+    margin-top: 1.875rem
   }
   .design-skills__percent {
     font-size: 1.875rem
   }
   .design-skills__title {
-    font-size: 1.25rem
+    font-size: 1.875rem
   }
   .frontend-skills__content {
     padding-top: 3.125rem
   }
   .frontend-skills__percent {
-    margin-top: 2.1875rem
+    margin-top: 1.875rem
   }
   .frontend-skills__percent {
     font-size: 1.875rem
   }
   .frontend-skills__title {
-    font-size: 1.25rem
+    font-size: 1.875rem
   }
   .project1__image {
     min-width: 21.875rem
@@ -1530,14 +1586,14 @@ textarea.input {
       padding-top: calc(3.125rem + 6.25 * (100vw - 23.4375rem)/ 96.5625)
     }
   }
-  @supports (margin-top:clamp(2.1875rem ,1.5200242718rem + 2.8478964401vw ,4.9375rem)) {
+  @supports (margin-top:clamp(1.875rem ,1.1316747573rem + 3.1715210356vw ,4.9375rem)) {
     .design-skills__percent {
-      margin-top: clamp(2.1875rem ,1.5200242718rem + 2.8478964401vw ,4.9375rem)
+      margin-top: clamp(1.875rem ,1.1316747573rem + 3.1715210356vw ,4.9375rem)
     }
   }
-  @supports not (margin-top:clamp(2.1875rem ,1.5200242718rem + 2.8478964401vw ,4.9375rem)) {
+  @supports not (margin-top:clamp(1.875rem ,1.1316747573rem + 3.1715210356vw ,4.9375rem)) {
     .design-skills__percent {
-      margin-top: calc(2.1875rem + 2.75 * (100vw - 23.4375rem)/ 96.5625)
+      margin-top: calc(1.875rem + 3.0625 * (100vw - 23.4375rem)/ 96.5625)
     }
   }
   @supports (font-size:clamp(1.875rem ,1.5716019417rem + 1.2944983819vw ,3.125rem)) {
@@ -1550,14 +1606,14 @@ textarea.input {
       font-size: calc(1.875rem + 1.25 * (100vw - 23.4375rem)/ 96.5625)
     }
   }
-  @supports (font-size:clamp(1.25rem ,1.0983009709rem + 0.6472491909vw ,1.875rem)) {
+  @supports (font-size:clamp(1.875rem ,1.7233009709rem + 0.6472491909vw ,2.5rem)) {
     .design-skills__title {
-      font-size: clamp(1.25rem ,1.0983009709rem + .6472491909vw ,1.875rem)
+      font-size: clamp(1.875rem ,1.7233009709rem + .6472491909vw ,2.5rem)
     }
   }
-  @supports not (font-size:clamp(1.25rem ,1.0983009709rem + 0.6472491909vw ,1.875rem)) {
+  @supports not (font-size:clamp(1.875rem ,1.7233009709rem + 0.6472491909vw ,2.5rem)) {
     .design-skills__title {
-      font-size: calc(1.25rem + .625 * (100vw - 23.4375rem)/ 96.5625)
+      font-size: calc(1.875rem + .625 * (100vw - 23.4375rem)/ 96.5625)
     }
   }
   @supports (padding-top:clamp(3.125rem ,1.6080097087rem + 6.4724919094vw ,9.375rem)) {
@@ -1570,14 +1626,14 @@ textarea.input {
       padding-top: calc(3.125rem + 6.25 * (100vw - 23.4375rem)/ 96.5625)
     }
   }
-  @supports (margin-top:clamp(2.1875rem ,1.5200242718rem + 2.8478964401vw ,4.9375rem)) {
+  @supports (margin-top:clamp(1.875rem ,1.1316747573rem + 3.1715210356vw ,4.9375rem)) {
     .frontend-skills__percent {
-      margin-top: clamp(2.1875rem ,1.5200242718rem + 2.8478964401vw ,4.9375rem)
+      margin-top: clamp(1.875rem ,1.1316747573rem + 3.1715210356vw ,4.9375rem)
     }
   }
-  @supports not (margin-top:clamp(2.1875rem ,1.5200242718rem + 2.8478964401vw ,4.9375rem)) {
+  @supports not (margin-top:clamp(1.875rem ,1.1316747573rem + 3.1715210356vw ,4.9375rem)) {
     .frontend-skills__percent {
-      margin-top: calc(2.1875rem + 2.75 * (100vw - 23.4375rem)/ 96.5625)
+      margin-top: calc(1.875rem + 3.0625 * (100vw - 23.4375rem)/ 96.5625)
     }
   }
   @supports (font-size:clamp(1.875rem ,1.5716019417rem + 1.2944983819vw ,3.125rem)) {
@@ -1590,14 +1646,14 @@ textarea.input {
       font-size: calc(1.875rem + 1.25 * (100vw - 23.4375rem)/ 96.5625)
     }
   }
-  @supports (font-size:clamp(1.25rem ,1.0983009709rem + 0.6472491909vw ,1.875rem)) {
+  @supports (font-size:clamp(1.875rem ,1.7233009709rem + 0.6472491909vw ,2.5rem)) {
     .frontend-skills__title {
-      font-size: clamp(1.25rem ,1.0983009709rem + .6472491909vw ,1.875rem)
+      font-size: clamp(1.875rem ,1.7233009709rem + .6472491909vw ,2.5rem)
     }
   }
-  @supports not (font-size:clamp(1.25rem ,1.0983009709rem + 0.6472491909vw ,1.875rem)) {
+  @supports not (font-size:clamp(1.875rem ,1.7233009709rem + 0.6472491909vw ,2.5rem)) {
     .frontend-skills__title {
-      font-size: calc(1.25rem + .625 * (100vw - 23.4375rem)/ 96.5625)
+      font-size: calc(1.875rem + .625 * (100vw - 23.4375rem)/ 96.5625)
     }
   }
   @supports (min-width:clamp(21.875rem ,19.5995145631rem + 9.7087378641vw ,31.25rem)) {
@@ -1904,4 +1960,7 @@ textarea.input {
     color: #e3e6ec;
     transition: all .5s ease
   }
+}
+.webp .skills__container::before {
+  background: url(../img/fon.webp)
 }
